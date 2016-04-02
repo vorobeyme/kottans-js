@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pokedex</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="row text-center pokedex-header">
+                <div class="col-lg-12">
+                    <h1 class="page-header pokefont">Pokedex</h1>
+                </div>
+            </div>
+
+            <div class="row type-filter">
+                <div class="col-md-8">
+                    <a href="#" id="type-checkbox-btn">Show types</a>
+                    <div id="type-filter-container">
+                        <ul class="type-checkbox-grid">
+                            <li data-type-id="{{id}}">
+                                <label class="checkbox-inline"><input data-filter-name="{{toLowerCase name}}" value="type-{{id}}" type="checkbox" />{{name}}</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row pokedex-container">
+                        <script id="pokedex-template" type="x-handlebars-template">
+                            <div class="pokemons-content">
+                                <div class="col-md-4 pokemon-item">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title text-center">{{name}}</h3>
+                                        </div>
+                                        <div class="panel-body" data-pokemon-id="{{pkdx_id}}">
+                                            <div class="pokemon-item-image">
+                                                <img src="http://pokeapi.co/media/img/{{pkdx_id}}.png" alt="{{name}}" width="120" height="120">
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </script>
+                    </div>
+
+                    <div class="row text-center load-more-btn">
+                        <div class="col-lg-12">
+                            <a href="#" class="btn btn-info btn-lg btn-block">Load More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="detailed-info-container">
+                    <div class="row detailed-info-content">
+                    
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div class="detailed-info-top">
+                                        <a href="#">On Top <span>&uarr;</span></a>
+                                    </div>
+                                    <div class="detailed-info-image">
+                                        <img width="120" height="120" src="http://pokeapi.co/media/img/{{pkdx_id}}.png" alt="{{name}}">
+                                    </div>
+                                    <h3>{{name}} {{padPokemonId pkdx_id}}</h3>
+                                    <table class="table table-condensed">
+                                        <tr>
+                                            <th>Type</th>
+                                            <th>Fire</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Attack</td>
+                                            <td>{{attack}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Defense</td>
+                                            <td>{{defense}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hp</td>
+                                            <td>{{hp}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SP Attack</td>
+                                            <td>{{sp_atk}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SP Defense</td>
+                                            <td>{{sp_def}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Speed</td>
+                                            <td>{{speed}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Weight</td>
+                                            <td>{{weight}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total moves</td>
+                                            <td>{{moves.length}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Pokedex, 2016</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+    </body>
+</html>
