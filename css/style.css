@@ -1,0 +1,72 @@
+.pokemon-item { margin-bottom: 25px; }
+
+.pokemon-item-image {
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+#detailed-info-container .detailed-info-image,
+#detailed-info-container h3 {
+    text-align: center;
+}
+#detailed-info-container .detailed-info-top {
+    text-align: right;
+    font-size: 10px;
+    visibility: hidden;
+}
+
+.btn-color-1, .btn-color-10, .btn-color-11, 
+.btn-color-1:hover, .btn-color-10:hover, .btn-color-11:hover,
+.btn-color-1:focus, .btn-color-10:focus, .btn-color-11:focus { color: #fff; } 
+
+.btn-color-1 {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+.btn-color-1:hover, .btn-color-1:focus {
+    background-color: #449d44;
+    border-color: #398439;
+}
+.btn-color-10 {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+.btn-color-10:hover, .btn-color-10:focus {
+    background-color: #31b0d5;
+    border-color: #269abc;
+}
+.btn-color-11 {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+.btn-color-11:hover, .btn-color-11:focus {
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+.btn-color-3, .btn-color-4, .btn-color-7 {}
+
+.pokemon-item .panel-body:hover {
+    cursor: pointer;
+}
+
+.type-checkbox-grid { width: 100%; }
+.type-checkbox-grid li {
+    float: left;
+    display: inline-block;
+    width: 25%;
+}
+
+ul.type-checkbox-grid,
+ul.type-checkbox-grid li {
+    margin-left: 0;
+    padding-left: 0;
+}
+.type-filter {
+    margin-bottom: 20px;
+}
+
+#type-filter-container {
+    display:none;
+}
