@@ -1,5 +1,14 @@
+@import url(http://db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+
 .pokemon-item { margin-bottom: 25px; }
 
+.pokefont {
+    font-family: 'Pokemon';
+    font-size: 42pt;
+    color: #fff624;
+    text-shadow: #276fff 0 0 7px, #276fff 0 0 7px, #276fff 0 0 7px,
+                 #276fff 0 0 7px, #276fff 0 0 7px, #276fff 0 0 7px;
+}
 .pokemon-item-image {
     text-align: center;
     border-bottom: 1px solid #eeeeee;
@@ -69,4 +78,19 @@ ul.type-checkbox-grid li {
 
 #type-filter-container {
     display:none;
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+    #detailed-info-container {
+        margin-top:20px;
+    }
+    #detailed-info-container .detailed-info-top {
+        visibility: visible;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
 }
