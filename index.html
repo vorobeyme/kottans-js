@@ -54,7 +54,7 @@
                                                 <div class="panel-heading">
                                                     <h3 class="panel-title text-center">{{name}}</h3>
                                                 </div>
-                                                <div class="panel-body" data-pokemon-id="{{pkdx_id}}">
+                                                <div class="panel-body" data-pokemon-id="{{pkdx_id}}" id="pokemon-{{pkdx_id}}">
                                                     <div class="pokemon-item-image">
                                                         <img src="http://pokeapi.co/media/img/{{pkdx_id}}.png" alt="{{name}}" width="120" height="120">
                                                     </div>
@@ -81,13 +81,13 @@
 
                 <div class="col-md-4" id="detailed-info-container">
                     <div class="sticky-detailed-info">
-                        <div class="row detailed-info-content" id="sidebar">
+                        <div class="row detailed-info-content">
                             <script id="pokedex-info-template" type="text/x-handlebars-template">
-                                <div class="col-md-12">
+                                <div class="col-md-12" id="show-pokemon-{{pkdx_id}}">
                                     <div class="panel panel-default">
                                         <div class="panel-body">
                                             <div class="detailed-info-top">
-                                                <a href="#">On Top <span>&uarr;</span></a>
+                                                <a href="#" data-card-id="{{pkdx_id}}">On Top <span>&uarr;</span></a>
                                             </div>
                                             <div class="detailed-info-image">
                                                 <img width="120" height="120" src="http://pokeapi.co/media/img/{{pkdx_id}}.png" alt="{{name}}">

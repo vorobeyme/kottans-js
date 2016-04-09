@@ -113,6 +113,7 @@ var Pocedex = {
                 e.preventDefault();
                 var pokemonId = parseInt($(this).data('pokemon-id'));
                 Pocedex.showPokemonInfo(pokemonId);
+                Pocedex.scrollToPokemonInfo(pokemonId);
 		});
 
         // Card types
@@ -156,6 +157,28 @@ var Pocedex = {
             source = $("#pokedex-info-template").html(),
             template = Handlebars.compile(source);
 		detailedInfo.append(template(singlePokemon));
+
+        $('.detailed-info-top')
+            .off('click')
+            .on('click', function(e) {
+                e.preventDefault();
+                Pocedex.scrollToPokemonTop(pokemonId);
+            });
+    },
+
+    scrollToPokemonInfo: function(pokemonId) {
+        if ($(window).width() > 974)
+            return;
+
+        $('html, body').animate({
+            scrollTop: $("#show-pokemon-" + pokemonId).offset().top
+        }, 200);
+    },
+
+    scrollToPokemonTop: function(pokemonId) {
+        $('html, body').animate({
+            scrollTop: $("#pokemon-" + pokemonId).offset().top
+        }, 200);
     },
 
     showImageLoading: function() {
@@ -215,6 +238,20 @@ $(document).ready(function() {
                 sidebarWidth = $('#detailed-info-container').width() < detailedInfoWidth
                                ? $('#detailed-info-container').width()
                                : detailedInfoWidth;
+
+            if (stickyTop < windowTop && windowWidth > 974) {
+                $('.sticky-detailed-info').css({ position: 'fixed', top: 10, width: sidebarWidth });
+            } else {
+                $('.sticky-detailed-info').css({ position: 'static', width: 'auto'});
+            }
+        });
+
+        $(window).resize(function() {
+            var windowTop = $(window).scrollTop(),
+                windowWidth = $(window).width(),
+                sidebarWidth = $('#detailed-info-container').width() < detailedInfoWidth
+                    ? $('#detailed-info-container').width()
+                    : detailedInfoWidth;
 
             if (stickyTop < windowTop && windowWidth > 974) {
                 $('.sticky-detailed-info').css({ position: 'fixed', top: 10, width: sidebarWidth });
