@@ -205,16 +205,6 @@ $(document).ready(function() {
         return false;
     });
 
-    /*
-    $('#loading').hide()
-        .ajaxStart(function() {
-            $(this).show();
-        })
-        .ajaxStop(function() {
-            $(this).hide();
-        });
-        */
-
     if (!!$('.sticky-detailed-info').offset()) {
         var stickyTop = $('.sticky-detailed-info').offset().top,
             detailedInfoWidth = $('#detailed-info-container').width();

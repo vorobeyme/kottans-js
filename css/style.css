@@ -80,6 +80,13 @@ ul.type-checkbox-grid li {
     display:none;
 }
 
+#loading {
+    background: url(../img/loading.gif) no-repeat center;
+    height: 50px;
+    margin: 0 0 30px;
+    display: none;
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
     #detailed-info-container {
