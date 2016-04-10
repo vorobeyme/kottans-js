@@ -26,9 +26,11 @@
     visibility: hidden;
 }
 
-.btn-color-1, .btn-color-10, .btn-color-11, 
-.btn-color-1:hover, .btn-color-10:hover, .btn-color-11:hover,
-.btn-color-1:focus, .btn-color-10:focus, .btn-color-11:focus { color: #fff; } 
+.btn-color-1, .btn-color-10, .btn-color-11, .btn-color-3, .btn-color-4, .btn-color-7,
+.btn-color-1:hover, .btn-color-10:hover, .btn-color-11:hover, .btn-color-3:hover, .btn-color-4:hover, .btn-color-7:hover,
+.btn-color-1:focus, .btn-color-10:focus, .btn-color-11:focus, .btn-color-3:focus, .btn-color-4:focus, .btn-color-7:focus {
+    color: #fff;
+}
 
 .btn-color-1 {
     background-color: #5cb85c;
@@ -54,7 +56,34 @@
     background-color: #c9302c;
     border-color: #ac2925;
 }
-.btn-color-3, .btn-color-4, .btn-color-7 {}
+.btn-color-3 {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.btn-color-3:hover, .btn-color-3:focus {
+    background-color: #286090;
+    border-color: #122b40;
+}
+
+.btn-color-7 {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+
+.btn-color-7:hover, .btn-color-7:focus {
+    background-color: #ec971f;
+    border-color: #985f0d;
+}
+
+.btn-color-4 {
+    border-color: #6b15a1;
+    background: #a13c9e;
+}
+.btn-color-4:hover, .btn-color-4:focus {
+    border-color: #6b15a1;
+    background: #8828a1;
+}
 
 .pokemon-item .panel-body:hover {
     cursor: pointer;

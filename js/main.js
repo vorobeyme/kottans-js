@@ -80,7 +80,7 @@ var Pocedex = {
 
     generateAllPokemons: function(data) {
         Pocedex.addPokemons(data);
-        Pocedex.renderPokemonGrid(data);
+        Pocedex.renderPokemonGrid(Pocedex.pokemons);
 	},
 
     generateFilteredPokemons: function (selectedFiltersObj) {
@@ -104,6 +104,7 @@ var Pocedex = {
 		var source = $("#pokedex-template").html();
 		var template = Handlebars.compile(source);
 
+        pokemonList.find('.pokemons-content').remove();
         pokemonList.append(template(data));
 
 		// Show card info
