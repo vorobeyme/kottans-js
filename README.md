@@ -1,8 +1,7 @@
 Pokedex
-===================
 -------------
 ##### Kottans course test task #1
-Pokedex is a jQuery-based web client for http://pokeapi.co.
+Pokedex is a jQuery-based web client for http://pokeapi.co.       
 Works on both desktop and mobile screens with filter pokemons by type.
 
 ### Installation
